@@ -1,11 +1,11 @@
 <?php
-$conn = new mysqli("mysql", "root", "clave123", "mi_db");
+$conn = new mysqli("mysql", "root", "clave123", "Secretaria_Administrativa");
 // Verifica conexión
 if ($conn->connect_error) {
 	die("La conexión falló: " . $conn->connect_error);
 }else echo "Conexión exitosa ";
 
-$sql = "SELECT nombre FROM usuarios";
+$sql = "SELECT nombre FROM nombre";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
