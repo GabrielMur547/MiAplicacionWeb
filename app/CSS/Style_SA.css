@@ -1,0 +1,49 @@
+.top{
+    background-color:green;
+}
+
+.formulario {
+    color: black;
+    padding: 20px;
+    background-color: rgba(216,255,216,0.9);
+}
+
+body {
+    background-color: rgba(255,255,255,0.9);
+    background-image: url(utp.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+input{
+    width: 75%;
+    border-color: white;
+    border: 4px;
+    border-radius: 2px;
+    background-color:rgba(255,255,255,0.6);
+    color: black;
+}
+
+textarea {
+    width: 75%;
+    height: 66px;
+    border-color: white;
+    border: 4px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.6);
+    color: black;
+}
+
+button{
+    margin-left: 1200px;
+}
+
+select {
+    width: 300px;
+    border-color: white;
+    border: 4px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.6);
+    color: black;
+}
