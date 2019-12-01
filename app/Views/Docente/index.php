@@ -15,7 +15,7 @@
                 <?php
                 foreach ($datos as $dato) { ?>
                     <tr>
-                        <td><?php echo $dato["iddocentes"] ?></td>
+                        <td><?php echo $dato["id_docente"] ?></td>
                         <td><?php echo $dato["cedula"] ?></td>
                         <td><?php echo $dato["primer_nombre"] . ' ' . $dato["segundo_nombre"] ?></td>
                         <td><?php echo $dato["primer_apellido"] . ' ' . $dato["segundo_apellido"] ?></td>
