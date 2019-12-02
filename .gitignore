@@ -4,3 +4,10 @@ MySQL/ibtmp1
 .ibt
 MySQL/ibdata1
 MySQL/ib_logfile0
+MySQL/ib_logfile0
+MySQL/auto.cnf
+MySQL/binlog.000015
+MySQL/binlog.index
+MySQL/ib_logfile0
+MySQL/mysql.ibd
+MySQL/undo_002
