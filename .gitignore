@@ -1,0 +1,6 @@
+MySQL/#innodb_temp/
+MySQL/ibtmp1
+*.ibtmp1
+.ibt
+MySQL/ibdata1
+MySQL/ib_logfile0

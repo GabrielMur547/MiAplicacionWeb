@@ -7,7 +7,10 @@
                         <a class="nav-link" href="#">Secretaría Administrativa<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Informacion Docente</a>
+                        <a class="nav-link" href="?controller=Docente&action=index">Docentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?controller=Administrativo&action=index">Administrativo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Reparaciones</a>
