@@ -1,4 +1,4 @@
-<main role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4">
+<div style="text-align: center; width:100%;">
 
     <h2 class="mt-2">Docentes</h2>
     <div style="padding-left:10%; padding-right: 10%;padding-top: 2%;">
@@ -43,4 +43,4 @@
         </table>
          
     </div>
-</main>
+</div>
