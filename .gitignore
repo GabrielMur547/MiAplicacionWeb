@@ -5,9 +5,12 @@ MySQL/ibtmp1
 MySQL/ibdata1
 MySQL/ib_logfile0
 MySQL/ib_logfile0
+<<<<<<< HEAD
 MySQL/auto.cnf
 MySQL/binlog.000015
 MySQL/binlog.index
 MySQL/ib_logfile0
 MySQL/mysql.ibd
 MySQL/undo_002
+=======
+>>>>>>> 4a39aa19a7f79b59fac3e7d6409401b2b64dbd6c
