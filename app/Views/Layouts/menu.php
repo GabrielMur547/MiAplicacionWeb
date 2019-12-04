@@ -15,9 +15,9 @@
                 Gestión Docente
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
                     <a class="dropdown-item" href="?controller=Docente&action=index">Listar Docentes</a>
                     <a class="dropdown-item" href="?controller=Docente&action=add">Agregar Docente</a>
+
                 </div>
             </li>
 

@@ -9,7 +9,6 @@
             </div>  
         </form>
 </div>
-
     
 <div class="table-responsive" style="padding-left: 2%; padding-right: 2%;">
     <table class="table">
@@ -41,5 +40,4 @@
                 <?php }
                 ?>
             </tbody>
-    </table>    
 </div>
