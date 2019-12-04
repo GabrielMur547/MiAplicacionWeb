@@ -1,52 +1,31 @@
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <h2 class="mt-2">Registro de nuevo docente</h2>
-    <form action="?controller=Docente&&action=save" method="POST">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="primer_nombre" class="col-md-4 col-form-label">Primer nombre:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="primer_nombre" placeholder="Primer nombre del docente">
-                    </div>
-                </div>
+<div style="margin-left: 20%;margin-right: 20%;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">
+        <h2>Registrar</h2>
+        <form action="?controller=Docente&&action=save" method="POST">
+            <div class="form-group">
+                        <label for="exampleInputEmail1">Dirección de correo:</label>
+                        <input type="email" class="form-control is-invalid" placeholder="Correo Institucional" required>
             </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="segundo_nombre" class="col-md-4 col-form-label">Segundo nombre:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="segundo_nombre" placeholder="Segundo nombre del docente">
-                    </div>
-                </div>
+            <div class="form-group">
+                        <label for="exampleInputPassword1">Contraseña</label>
+                        <input type="password" class="form-control is-invalid" placeholder="Contraseña..." required>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="primer_apellido" class="col-md-4 col-form-label">Primer apellido:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="primer_apellido" placeholder="Primer apellido del docente">
-                    </div>
-                </div>
+            <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control is-invalid" placeholder="Nombre..." required>
             </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="segundo_apellido" class="col-md-4 col-form-label">Segundo apellido:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="segundo_apellido" placeholder="Segundo apellido del docente">
-                    </div>
-                </div>
+            <div class="form-group">
+                    <label>Apellido</label>
+                    <input type="text" class="form-control is-invalid" placeholder="Apellido..." required>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label for="cedula" class="col-md-4 col-form-label">Cédula:</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control" id="cedula" placeholder="Cédula del docente">
-                    </div>
-                </div>
+            <div class="form-group">
+                    <label>Categoría</label>
+                    <select class="custom-select is-invalid" required>
+                            <option selected disabled value="">- Seleccione -</option>
+                            <option>Tiempo completo</option>
+                            <option>Tiempo parcial</option>
+                            <option>Investigador</option>
+                        </select>  
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
-</main>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+</div>

@@ -18,6 +18,12 @@ class DocenteController
 		require_once('Views/Docente/index.php');
 	}
 
+	function busqueda(){
+		$docente = new DocenteModel();
+		$datos = $docente->buscar_doc();
+		require_once('Views/Docente/index.php');
+	}
+
 	function add(){
 		require_once('Views/Docente/add.php');
 	}
