@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2 class="mt-2">Docentes</h2>
 <div style="padding-left:10%; padding-right: 10%;padding-top: 2%; width:100%">
         <form action="?controller=Docente&&action=busqueda" method="POST">
@@ -9,6 +10,19 @@
             </div>  
         </form>
 </div>
+=======
+<div style="text-align: center; width:100%;">
+
+    <h2 class="mt-2">Docentes</h2>
+    <div style="padding-left:10%; padding-right: 10%;padding-top: 2%;">
+        <div class="input-group shadow p-3 mb-5 bg-white rounded" style="border-radius: 6px;">
+            <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+        </div>
+    </div>
+>>>>>>> dd5ae994321f6069227e34ec2373bd3750e2f4e0
     
 <div class="table-responsive" style="padding-left: 2%; padding-right: 2%;">
     <table class="table">
@@ -40,5 +54,11 @@
                 <?php }
                 ?>
             </tbody>
+<<<<<<< HEAD
     </table>    
+=======
+        </table>
+         
+    </div>
+>>>>>>> dd5ae994321f6069227e34ec2373bd3750e2f4e0
 </div>
