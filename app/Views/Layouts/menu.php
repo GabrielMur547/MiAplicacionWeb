@@ -15,14 +15,9 @@
                 Gestión Docente
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-<<<<<<< HEAD
                     <a class="dropdown-item" href="?controller=Docente&action=index">Listar Docentes</a>
                     <a class="dropdown-item" href="?controller=Docente&action=add">Agregar Docente</a>
-=======
-                
-                    <a class="dropdown-item" href="?controller=Docente&action=index">Listar Docentes</a>
-                    <a class="dropdown-item" href="#">Agregar Docente</a>
->>>>>>> dd5ae994321f6069227e34ec2373bd3750e2f4e0
+
                 </div>
             </li>
 
