@@ -20,7 +20,7 @@ USE `Secretaria_Administrativa` ;
 -- -----------------------------------------------------
 -- Table `mydb`.`Registro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Secretaria_Administrativa`.`Registro` (
+CREATE TABLE IF NOT EXISTS `Secretaria_Administrativa`.`registro` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `primer_nombre` VARCHAR(20) NOT NULL,
   `primer_apellido` VARCHAR(20) NOT NULL,
