@@ -35,8 +35,8 @@
     Nombre Usuario
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Perfil</button>
-    <button class="dropdown-item" type="button">Cerrar Sesión</button>
+    <a class="dropdown-item" href="?controller=User&action=verify">Perfil</a>
+    <a class="dropdown-item" href="?controller=UserSession&action=closeSession">Cerrar Sesión</a>
   </div>
 </div>
     </div>
