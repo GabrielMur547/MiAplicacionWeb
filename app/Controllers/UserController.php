@@ -1,43 +1,37 @@
 <?php
 
-require_once('Models/UserModel.php');
-require_once('Controllers/UserSessionController.php');
-class UserController
-{
-    function __construct()
-    {
+require_once ('Models/UserModel.php');
+require_once ('Controllers/UserSession.php');
 
-    }
+class UserController{
 
-    function verify()
+    public function verify()
     {
-        $userSession = new UserSessionController();
+        $userSession = new UserSession();
         $user = new UserModel();
 
         if(isset($_SESSION['user'])){
-            //echo "hay sesion";
+            echo "hay sesion";
             $user->setUser($userSession->getCurrentUser());
-            require_once('Views/Layouts/layout.php');
-
-        }else if(isset($_POST['username']) && isset($_POST['password'])){
+            require_once('Views/Home/index.php');
+        } else if(isset($_POST['correo']) && isset($_POST['contrasenia'])){
+            //echo "Validacion";
+           
+            $userForm = $_POST['correo'];
+            $passForm = $_POST['contrasenia'];
             
-            $userForm = $_POST['username'];
-            $passForm = $_POST['password'];
-
-            $user = new UserModel();
             if($user->userExists($userForm, $passForm)){
                 //echo "Existe el usuario";
                 $userSession->setCurrentUser($userForm);
                 $user->setUser($userForm);
-
-                require_once('Views/Layouts/layout.php');
+                require_once('Views/Home/index.php');
             }else{
                 //echo "No existe el usuario";
                 $errorLogin = "Nombre de usuario y/o password incorrecto";
                 require_once('Views/User/login.php');
             }
         }else{
-            //echo "login";
+           // echo "login";
             require_once('Views/User/login.php');
         }
     }

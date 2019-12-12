@@ -21,6 +21,19 @@ class DocenteModel{
         }
         return $this->docentes;
     }
+    public function insert_user($correo, $pass, $nom, $ape, $cedu){
+        $consultar = "SELECT * FROM registrar WHERE correo = '$correo';";
+        $result = $this->db->query($consultar);
+
+        if(mysqli_num_rows($result)==0){
+            $insert_user = $this->db->query("insert into registrar (primer_nombre, primer_apellido, cedula, correo, contrasenia, tipo) VALUES ('$nom', '$ape', '$cedu', '$correo', '$pass', '1');");
+            return true;
+        }
+        else{
+            return false;
+        }
+    
+    }   
 }
 
 ?>

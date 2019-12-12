@@ -11,10 +11,10 @@ class UserModel{
 
     public function userExists($user, $pass){
         $md5pass = md5($pass);
-        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE correo = :user AND password = :pass');
-        $query->execute(['user' => $user, 'pass' => $md5pass]);
+        $consultar = "SELECT * FROM registrar WHERE correo = '$user'AND contrasenia = '$pass';";
+        $result = $this->db->query($consultar);
 
-        if($query->rowCount()){
+        if(mysqli_num_rows($result)>0){
             return true;
         }else{
             return false;
@@ -22,12 +22,14 @@ class UserModel{
     }
 
     public function setUser($user){
-        $query = $this->connect()->prepare('SELECT * FROM registrar WHERE username = :user');
-        $query->execute(['user' => $user]);
+        $consultar = "SELECT * FROM registrar WHERE correo = '$user'AND contrasenia = '$pass';";
+        $result = $this->db->query($consultar);
         
-        foreach ($query as $currentUser) {
-            $this->nombre = $currentUser['nombre'];
-            $this->username = $currentUser['username'];
+        foreach ($result as $currentUser) {
+            $this->nombre = $currentUser['primer_nombre'];
+            $this->username = $currentUser['primer_apellido'];
+            echo $this->nombre;
+            echo $this->username;
         }
     }
 
