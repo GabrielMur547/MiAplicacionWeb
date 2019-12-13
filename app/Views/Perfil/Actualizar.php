@@ -1,4 +1,7 @@
-
+<header>
+<?php require_once('Views/Layouts/menuUser.php');
+?>
+</header>
     <div style="padding-left: 1%; padding-right: 1%; width: 100%;">
         <h2>Editar Perfil</h2>
         <form action="?controller=Docente&&action=update" method="post" class="was-validated">
@@ -157,3 +160,9 @@
         </div>
 
     </div>
+
+<header>
+<?php require_once('Views/Layouts/menuUser.php');
+?>
+</header>
+
