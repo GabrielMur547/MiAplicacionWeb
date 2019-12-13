@@ -17,36 +17,7 @@ session_start();
 </head>
 
 <body>
-<?php 
-require_once ('Controllers/UserSessionController.php');
-if($_SESSION['user'] == ''){
-	?>
-	<header>
-	<?php 
-	echo " login";
-	?>
-	</header>
-<?php
-}
-else if($_SESSION['user'] == 'gabrielmurillo547@gmail.com'){
-	?>
-	<header>
-	<?php require_once('menu.php'); 
-	echo " es admin";
-	?>
-	</header>
-<?php
-}
-else if ($_SESSION['user'] != 'gabrielmurillo547@gmail.com'){
-	?>
-	<header>
-	<?php require_once('menuUser.php'); 
-	echo " no es admin";
-	?>
-	</header>
-	<?php	
-}
-?>
+	
 	<div class="container-fluid">
         <div class="row">
 		<?php require_once('routes.php'); ?>
