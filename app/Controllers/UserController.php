@@ -1,17 +1,20 @@
 <?php
 
 require_once ('Models/UserModel.php');
-require_once ('Controllers/UserSession.php');
+require_once ('Controllers/UserSessionController.php');
 
 class UserController{
 
     public function verify()
     {
-        $userSession = new UserSession();
+        
+        $userSession = new UserSessionController();
         $user = new UserModel();
 
         if(isset($_SESSION['user'])){
-            echo "hay sesion";
+            echo "hay sesion ";
+            echo "Bienvenido ";
+            echo $_SESSION['user'];
             $user->setUser($userSession->getCurrentUser());
             require_once('Views/Home/index.php');
         } else if(isset($_POST['correo']) && isset($_POST['contrasenia'])){

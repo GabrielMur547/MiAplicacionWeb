@@ -10,7 +10,7 @@ class UserModel{
     }
 
     public function userExists($user, $pass){
-        $md5pass = md5($pass);
+        //$md5pass = md5($pass);
         $consultar = "SELECT * FROM registrar WHERE correo = '$user'AND contrasenia = '$pass';";
         $result = $this->db->query($consultar);
 
@@ -28,8 +28,6 @@ class UserModel{
         foreach ($result as $currentUser) {
             $this->nombre = $currentUser['primer_nombre'];
             $this->username = $currentUser['primer_apellido'];
-            echo $this->nombre;
-            echo $this->username;
         }
     }
 

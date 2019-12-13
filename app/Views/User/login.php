@@ -1,15 +1,20 @@
-<div>
+<div style="margin-left: 20%;margin-right: 20%;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">
     <form action="?controller=User&action=verify" method="POST">
-        <?php
+       
+        <h2>Iniciar sesión</h2>
+        <div class="form-group">
+                    <label for="exampleInputEmail1">Dirección de correo:</label>
+                    <input type="email" name="correo" class="form-control is-invalid" placeholder="Correo Institucional" required>
+        </div>
+        <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" name="contrasenia" class="form-control is-invalid" placeholder="Contraseña..." required>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+    </form>
+    <?php
             if(isset($errorLogin)){
                 echo $errorLogin;
             }
         ?>
-        <h2>Iniciar sesión</h2>
-        <p>Correo Electrónico: <br>
-        <input type="text" name="correo"></p>
-        <p>Contraseña: <br>
-        <input type="password" name="contrasenia"></p>
-        <p class="center"><input type="submit" value="Iniciar Sesión"></p>
-    </form>
 </div>

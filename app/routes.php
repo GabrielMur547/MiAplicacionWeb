@@ -29,7 +29,6 @@ function call($controller, $action)
             $controller = new HomeController();
             break;
         case 'Docente':
-
             $controller = new DocenteController();
             break;
         case 'Administrativo':

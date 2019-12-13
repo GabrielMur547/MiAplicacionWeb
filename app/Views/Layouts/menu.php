@@ -30,14 +30,13 @@
                 </div>
             </li>
         </ul>
-        <div class="dropdown">
-  <button style="background-color: green; border-color:white;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Nombre Usuario
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <a class="dropdown-item" href="?controller=User&action=verify">Perfil</a>
-    <a class="dropdown-item" href="?controller=UserSession&action=closeSession">Cerrar Sesión</a>
-  </div>
+        
+            <a style="color: green; border-color:white;" class="nav-link" href="?controller=UserSession&action=closeSession" type="button" id="closesession" role="button">
+            Cerrar Sesión 
+            </a>
+        
+        
+
 </div>
     </div>
 </nav>
