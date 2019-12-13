@@ -15,6 +15,7 @@ class UserController{
             echo "hay sesion ";
             echo "Bienvenido ";
             echo $_SESSION['user'];
+            $sesion =true;
             $user->setUser($userSession->getCurrentUser());
             require_once('Views/Home/index.php');
         } else if(isset($_POST['correo']) && isset($_POST['contrasenia'])){
@@ -27,6 +28,14 @@ class UserController{
                 //echo "Existe el usuario";
                 $userSession->setCurrentUser($userForm);
                 $user->setUser($userForm);
+                if($userForm == 'gabrielmurillo547@gmail.com'){
+                    require_once('Views/Layouts/Menu.php');
+                    echo " es admin";
+                }
+                else if ($userForm != 'gabrielmurillo547@gmail.com'){
+                    require_once('Views/Layouts/MenuUser.php');
+                    echo " no es admin";
+                }
                 require_once('Views/Home/index.php');
             }else{
                 //echo "No existe el usuario";
@@ -40,3 +49,5 @@ class UserController{
     }
 }
 ?>
+
+

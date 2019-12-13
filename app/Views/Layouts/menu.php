@@ -6,6 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="background-color: green;">
         <img src="http://www.utp.ac.pa/sites/default/files/SISTEMAS-LOGO.png" style="width:4%; position:center" />
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
             <li class="nav-item active">
                 <a style="color:white;font-size:16px;" class="nav-link" href="#">Secretaría Académica<span class="sr-only">(current)</span></a>
             </li>
@@ -34,9 +35,6 @@
             <a style="color: green; border-color:white;" class="nav-link" href="?controller=UserSession&action=closeSession" type="button" id="closesession" role="button">
             Cerrar Sesión 
             </a>
-        
-        
-
 </div>
     </div>
 </nav>

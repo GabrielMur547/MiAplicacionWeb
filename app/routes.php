@@ -6,7 +6,8 @@ $controllers = array(
     'Docente' => ['index', 'add', 'save'],
     'Administrativo' => ['index'],
     'User' => ['verify'],
-    'UserSession' => ['setCurrentUser', 'getCurrentUser', 'closeSession']
+    'UserSession' => ['setCurrentUser', 'getCurrentUser', 'closeSession'],
+    'Perfil' => ['Actualizar', 'Familiar', 'Preparacion']
 );
 
 if (array_key_exists($controller, $controllers)) {
@@ -40,6 +41,9 @@ function call($controller, $action)
         case 'UserSession':
             $controller = new UserSessionController();
             break;
+        case 'Perfil':
+            $controller = new PerfilController();
+            break;    
         default:
             # código...
             break;
