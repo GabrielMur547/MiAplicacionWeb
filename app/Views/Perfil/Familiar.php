@@ -1,6 +1,6 @@
 <header>
 <?php require_once('Views/Layouts/menuUser.php');
-echo " Funciona Familiar";
+//echo " Funciona Familiar";
 ?>
 </header>
 
@@ -23,17 +23,13 @@ echo " Funciona Familiar";
                     <label >Fecha de nacimiento: </label>
                     <input type="date" name="fecha_nac_fam" class="form-control is-invalid" required>
             </div>
-            <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
-                    <label >Localizacíon: </label>
-                    <input type="text" name="localizar" class="form-control is-invalid" required>
-            </div>
-        </div>
-
-        <div class="form-row">
             <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label >Parentezco: </label>
                     <input type="text" name="parentezco" class="form-control is-invalid" required>
             </div>
+        </div>
+
+        <div class="form-row">
             <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
                     <label >Prioridad: </label>
                     <select name="prioridad" class="custom-select is-invalid" id="validationServer04" required>
@@ -43,27 +39,27 @@ echo " Funciona Familiar";
                         <option>3</option>
                     </select>
             </div>
-        </div>
-
-        <div class="form-row">
             <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label >Telefono residencial: </label>
                     <input type="text" name="telef_casa_fam" class="form-control is-invalid" required>
             </div>
+        </div>
+
+        <div class="form-row">
             <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
                     <label >Telefono de oficina: </label>
                     <input type="text" name="telef_ofi_fam" class="form-control is-invalid" required>
             </div>
-        </div>
-
-        <div class="form-row">
             <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label >Celular: </label>
                     <input type="text" name="celular_fam" class="form-control is-invalid" required>
             </div>
+        </div>
+
+        <div class="form-row">
             <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
                     <label >Correo: </label>
-                    <input type="text" name="correo_fam" class="form-control is-invalid" required>
+                    <input type="email" name="correo_fam" class="form-control is-invalid" required>
             </div>
         </div>
     

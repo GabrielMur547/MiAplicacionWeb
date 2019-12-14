@@ -1,6 +1,6 @@
 <header>
 <?php require_once('Views/Layouts/menu.php');
-echo " login";
+//echo " login";
 ?>
 </header>
 <div style="margin-left: 20%;margin-right: 20%;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">

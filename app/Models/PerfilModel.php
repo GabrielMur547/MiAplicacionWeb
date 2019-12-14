@@ -81,37 +81,26 @@ class PerfilModel{
     $nombre_fam,
     $apellido_fam,
     $fecha_nac_fam,
-    $localizar,
     $prioridad,
     $telef_casa_fam,
     $telef_ofi_fam,
     $celular_fam,
     $correo_fam){
-        $consultar = "SELECT * FROM docentes WHERE id_docente = '$id';";
+        $consultar = "SELECT * FROM docentes WHERE id_docente = '12';";
         $result = $this->db->query($consultar);
 
         if(mysqli_num_rows($result)>0){
-            $insert = $this->db->query("insert into familiar_doc (parentezco,
-            nombre_fam,
-            apellido_fam,
-            fecha_nac_fam,
-            localizar,
-            prioridad,
-            telef_casa_fam,
-            telef_ofi_fam,
-            celular_fam,
-            correo_fam,
-            docentes_id_docente) VALUES ($parentezco,
-            $nombre_fam,
-            $apellido_fam,
-            $fecha_nac_fam,
-            $localizar,
-            $prioridad,
-            $telef_casa_fam,
-            $telef_ofi_fam,
-            $celular_fam,
-            $correo_fam,
-            '$id');");
+            $insert = $this->db->query("insert into familiar_doc (parentezco, nombre_fam, apellido_fam, fecha_nac_fam, prioridad, telef_casa_fam, telef_ofi_fam, celular_fam, correo_fam, docentes_id_docente) 
+            values('$parentezco', 
+            '$nombre_fam', 
+            '$apellido_fam', 
+            '80-01-21',  
+            '$prioridad', 
+            '$telef_casa_fam', 
+            '$telef_ofi_fam', 
+            '$celular_fam',
+            '$correo_fam', 
+            '12');");
             return true;
         }
         else{
@@ -131,18 +120,12 @@ class PerfilModel{
     $anio,
     $universidad,
     $nivel){
-        $consultar = "SELECT * FROM docentes WHERE id_docente = '$id';";
+        $consultar = "SELECT * FROM docentes WHERE id_docente = '12';";
         $result = $this->db->query($consultar);
 
         if(mysqli_num_rows($result)>0){
-            $insert = $this->db->query("insert into preparacion_academica_doc(titulo,
-            anio,
-            universidad,
-            nivel) VALUES ($titulo,
-            $anio,
-            $universidad,
-            $nivel,
-            '$id');");
+            $insert = $this->db->query("insert into preparacion_academica_doc(titulo, anio, universidad, nivel, docentes_id_docente) 
+            values('$titulo', '$anio', '$universidad', '$nivel', '12');");
             return true;
         }
         else{
