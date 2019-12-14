@@ -35,7 +35,7 @@ class PerfilController
 			$correo = $_POST['correo'];
 			$genero = $_POST['genero'];
 
-			echo $primer_nombre, 
+			/*echo $primer_nombre, 
 			$primer_apellido, 
 			$segundo_nombre, 
 			$segundo_apellido,
@@ -53,7 +53,7 @@ class PerfilController
 			$ubicacion_sede,
 			$depto,
 			$correo,
-			$genero;
+			$genero;*/
 
 				if($actualizar->update_perfil($primer_nombre, 
 				$primer_apellido, 
@@ -99,7 +99,6 @@ class PerfilController
 		&& isset($_POST['nombre_fam']) 
 		&& isset($_POST['apellido_fam']) 
 		&& isset($_POST['fecha_nac_fam']) 
-		&& isset($_POST['localizar'])
 		&& isset($_POST['prioridad'])
 		&& isset($_POST['telef_casa_fam'])
 		&& isset($_POST['telef_ofi_fam'])
@@ -110,29 +109,26 @@ class PerfilController
 			$nombre_fam = $_POST['nombre_fam'];
 			$apellido_fam = $_POST['apellido_fam'];
 			$fecha_nac_fam = $_POST['fecha_nac_fam'];
-			$localizar = $_POST['localizar'];
 			$prioridad = $_POST['prioridad'];
 			$telef_casa_fam = $_POST['telef_casa_fam'];
 			$telef_ofi_fam = $_POST['telef_ofi_fam'];
 			$celular_fam = $_POST['celular_fam'];
 			$correo_fam = $_POST['correo_fam'];
 
-			echo $parentezco,
+			/*echo $parentezco,
 			$nombre_fam,
 			$apellido_fam,
 			$fecha_nac_fam,
-			$localizar,
 			$prioridad,
 			$telef_casa_fam,
 			$telef_ofi_fam,
 			$celular_fam,
-			$correo_fam;
+			$correo_fam;*/
 
 				if($familiar->insert_familiar($parentezco,
 				$nombre_fam,
 				$apellido_fam,
 				$fecha_nac_fam,
-				$localizar,
 				$prioridad,
 				$telef_casa_fam,
 				$telef_ofi_fam,
@@ -168,10 +164,10 @@ class PerfilController
 			$universidad = $_POST['universidad'];
 			$nivel = $_POST['nivel'];
 
-			echo $titulo,
+			/*echo $titulo,
 			$anio,
 			$universidad,
-			$nivel;
+			$nivel;*/
 
 				if($preparacion->insert_preparacion($titulo,
 				$anio,
