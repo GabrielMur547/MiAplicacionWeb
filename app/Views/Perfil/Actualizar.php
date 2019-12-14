@@ -1,6 +1,5 @@
 <header>
 <?php require_once('Views/Layouts/menuUser.php');
-echo " Funciona Actualizar";
 ?>
 </header>
 <div style="padding-left: 1%; padding-right: 1%; width: 100%;">
