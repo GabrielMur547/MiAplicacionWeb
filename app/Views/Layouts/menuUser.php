@@ -16,7 +16,7 @@
                 Perfil
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="?controller=Perfil&action=update">Actualizar Perfil</a>
+                    <a class="dropdown-item" href="?controller=Perfil&action=Actualizar">Actualizar Perfil</a>
                     <a class="dropdown-item" href="?controller=Perfil&action=Familiar">Familiar</a>
                     <a class="dropdown-item" href="?controller=Perfil&action=Preparacion">Preparacion</a>
                 </div>

@@ -21,12 +21,6 @@ class DocenteModel{
         }
         return $this->docentes;
     }
-    public function consultar(){ //Esto debe agarrar el ID del usuario actual y ver su propia información
-        $consulta = $this->db->query("select $user_current from docentes;"); //No sé como se llama la variable donde tienes el id o nombre del usuario actual guardado
-            $this->docentes[] = $filas;
-        }
-        return $this->docentes;}
-
     public function insert_user($correo, $pass, $nom, $ape, $cedu){
         $consultar = "SELECT * FROM registrar WHERE correo = '$correo';";
         $result = $this->db->query($consultar);
@@ -40,28 +34,6 @@ class DocenteModel{
         }
     
     }   
-
-    public function update_user($primer_nombre, $segundo_nombre, $primer_apellido, $segundo_apellido, $cedula, $fecha_nac, $estado_civil, $tipo_sangre,$telefono_casa,$celular,$provincia_res,$distrito_res,$corregimiento_res,$direccion_especif, $categoria_doc, $ubicacion_cede, $depto, $correo, $genero){    
-        $insert_user = $this->db->query("UPDATE docente SET (primer_nombre='$primer_nombre', 
-                                                             segundo_nombre='$segundo_nombre', 
-                                                             primer_apellido='$primer_apellido', 
-                                                             segundo_apellido='$segundo_apellido', 
-                                                             cedula='$cedula', 
-                                                             fecha_nac='$fecha_nac', 
-                                                             estado_civil='$estado_civil', 
-                                                             tipo_sangre='$tipo_sangre',
-                                                             telefono_csa='$telefono_casa',
-                                                             celular='$celular',
-                                                             provincia_res='$provincia_res',
-                                                             distrito_res='$distrito_res',
-                                                             corregimiento_res='$corregimiento_res',
-                                                             direcion_especif'$direccion_especif', 
-                                                             categoria_doc='$categoria_doc', 
-                                                             ubicacion_cede='$ubicacion_cede', 
-                                                             depto='$depto', 
-                                                             correo='$correo', 
-                                                             genero='$genero') WHERE cedula=$user_current;"); //Colocar usuario actual    
-    }
 }
 
 ?>
