@@ -1,13 +1,13 @@
 <header>
 <?php require_once ('Controllers/UserSessionController.php');
-$userSession = new UserSessionController();
+//$userSession = new UserSessionController();
 if($_SESSION['user'] == 'gabrielmurillo547@gmail.com'){
     require_once('Views/Layouts/menu.php');
-    echo " es admin";
+    //echo " es admin";
 }
 else if ($_SESSION['user'] != 'gabrielmurillo547@gmail.com'){
     require_once('Views/Layouts/menuUser.php');
-    echo " no es admin";
+    //echo " no es admin";
 }
 ?>
 </header>

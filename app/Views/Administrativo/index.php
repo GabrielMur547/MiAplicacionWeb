@@ -1,8 +1,8 @@
 <header>
 <?php require_once('Views/Layouts/menu.php');
-echo " login";
+//echo " login";
 ?>
-<h2 class="mt-2">Docentes</h2>
+<h2 class="mt-2">Administrativo</h2>
 <div style="padding-left:10%; padding-right: 10%;padding-top: 2%; width:100%">
         <form action="?controller=Docente&&action=busqueda" method="POST">
             <div class="input-group shadow p-3 mb-5 bg-white rounded" style="border-radius: 6px;">

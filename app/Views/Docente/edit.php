@@ -1,6 +1,6 @@
 <header>
 <?php require_once('Views/Layouts/menu.php');
-echo " login";
+//echo " login";
 ?>
 </header>
 

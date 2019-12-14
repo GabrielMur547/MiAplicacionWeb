@@ -138,7 +138,7 @@ class PerfilModel{
             $insert = $this->db->query("insert into preparacion_academica_doc(titulo,
             anio,
             universidad,
-            nivel) VALUES ($titulo,
+            nivel, docentes_id_docente) VALUES ($titulo,
             $anio,
             $universidad,
             $nivel,

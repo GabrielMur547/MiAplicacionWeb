@@ -1,6 +1,6 @@
 <header>
 <?php require_once('Views/Layouts/menu.php');
-echo " login";
+//echo " login";
 ?>
 <h2 class="mt-2">Docentes</h2>
 <div style="padding-left:10%; padding-right: 10%;padding-top: 2%; width:100%">

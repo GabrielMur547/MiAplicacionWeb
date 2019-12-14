@@ -84,7 +84,7 @@ class PerfilController
 				}
 		}
 		else{
-			echo "no enccontro registros";
+			//echo "no enccontro registros";
 			require_once('Views/Perfil/Actualizar.php');
 		}
 	}
@@ -147,7 +147,7 @@ class PerfilController
 				}
 		}
 		else{
-		echo "no encontro registros";
+		//echo "no encontro registros";
 		require_once('Views/Perfil/Familiar.php');
 		}
 	}
@@ -173,21 +173,21 @@ class PerfilController
 			$universidad,
 			$nivel;
 
-				if($familiar->inset_preparacion($titulo,
+				if($preparacion->insert_preparacion($titulo,
 				$anio,
 				$universidad,
 				$nivel)){
-				echo "insertado";
+				echo "    insertado";
 				require_once('Views/Home/index.php');
 				}
 				else{
-					echo "no insertado";
-					require_once('Views/Perfil/Familiar.php');
+					echo "    no insertado";
+					require_once('Views/Perfil/Preparacion.php');
 				}
 		}
 		else{
-		echo "no encontro registros";
-		require_once('Views/Perfil/Familiar.php');
+		//echo "no encontro registros";
+		require_once('Views/Perfil/Preparacion.php');
 		}
 	}
 }
