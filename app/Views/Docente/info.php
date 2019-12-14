@@ -6,10 +6,7 @@
 <div style="margin-left: 5%; margin-right: 5%;" class="shadow p-3 mb-5 bg-white rounded">
             <div class="form-row">
                 <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
-                    
                     <label class="font-weight-bold">Primer nombre: </label>
-                    <br>
-                    <?php echo $dato["primer_nombre"] ?>
                 </div>
                 <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
                     <label class="font-weight-bold">Segundo nombre: </label>
