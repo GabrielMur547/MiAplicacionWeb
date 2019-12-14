@@ -74,7 +74,9 @@ class DocenteController
 
 	//Funcion que permite al admin editar y ver informacion de los docentes
 	function editar_otro(){
-		require_once('Views/Docente/edit.php');
+		$docente = new DocenteModel();
+		$datos = $docente->consultar();
+		require_once('Views/Docente/info.php');
 	}
 	/* function error(){
 		require_once('Views/Docente/error.php');
