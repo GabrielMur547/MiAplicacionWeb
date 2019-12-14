@@ -32,7 +32,7 @@ echo " login";
                 <?php
                     foreach ($datos as $dato) { ?>
                     <tr>
-                        <td><?php echo $dato["cedula"] ?></td>
+                        <td href="?controller=Docente&&action=editar_otro"><?php echo $dato["cedula"] ?></td>
                         <td><?php echo $dato["primer_nombre"] . ' ' . $dato["segundo_nombre"] ?></td>
                         <td><?php echo $dato["primer_apellido"] . ' ' . $dato["segundo_apellido"] ?></td>
                         <td><?php echo $dato["genero"] ?></td>

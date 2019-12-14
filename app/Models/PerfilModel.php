@@ -6,10 +6,18 @@ class PerfilModel{
     public function __construct(){
         $this->db = Conexion::conectar();
     }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function id(){
         $user = new UserSessionController();
         $id = $this->db->query("select id_docente from docentes where correo = '$user';");
     }
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function update_perfil(  $primer_nombre, 
                                     $primer_apellido,
                                     $segundo_nombre, 
@@ -65,7 +73,7 @@ class PerfilModel{
 
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function insert_familiar($parentezco,
     $nombre_fam,
     $apellido_fam,
@@ -114,7 +122,7 @@ class PerfilModel{
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
     public function insert_preparacion($titulo,
     $anio,
     $universidad,

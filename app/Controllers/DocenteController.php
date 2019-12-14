@@ -64,6 +64,12 @@ class DocenteController
 		}
 	}
 	}
+
+
+
+	function editar_otro(){
+		require_once('Views/Docente/edit.php');
+	}
 	/* function error(){
 		require_once('Views/Docente/error.php');
 	} */
