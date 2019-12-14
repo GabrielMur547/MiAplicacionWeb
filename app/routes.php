@@ -3,7 +3,7 @@
 
 $controllers = array(
     'Home' => ['index'],
-    'Docente' => ['index', 'add', 'save', 'busqueda'],
+    'Docente' => ['index', 'add', 'save', 'busqueda','editar_otro'],
     'Administrativo' => ['index'],
     'User' => ['verify'],
     'UserSession' => ['setCurrentUser', 'getCurrentUser', 'closeSession'],

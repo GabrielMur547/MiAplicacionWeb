@@ -32,7 +32,7 @@ class DocenteModel{
 
     //Inserta los registros de docente a la BD
     public function insert_user($correo, $pass, $nom, $ape, $cedu){
-        $consultar = "SELECT * FROM registrar WHERE correo = '$correo';";
+        $consultar = "SELECT * FROM registrar WHERE correo = '$correo' or cedula = '$cedu';";
         $result = $this->db->query($consultar);
 
         if(mysqli_num_rows($result)==0){
@@ -43,7 +43,15 @@ class DocenteModel{
             return false;
         }
     
-    }   
+    }
+    
+    
+    //Consulta la informacion de algun registro en especifico
+    public function consultar(){
+        $consulta = $this->db->query("select * from docentes WHERE cedula = '$cedula';");
+        $this->docentes[] = $filas;
+        return $this->docentes;
+    }
 }
 
 ?>

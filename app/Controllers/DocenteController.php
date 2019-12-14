@@ -62,10 +62,11 @@ class DocenteController
 		$cedula = $_POST['cedula'];
 
 		if($docente->insert_user($correo, $password, $nombre, $apellido, $cedula)){
-		require_once('Views/Docente/index.php');
+			$Registerexitoso = "Registro exitoso";
+			require_once('Views/Docente/add.php');
 		}
 		else{
-			$errorRegister = "El usuario ya existe";
+			$Registerexitoso = "El usuario ya existe";
 			require_once('Views/Docente/add.php');
 		}
 	}
@@ -74,7 +75,9 @@ class DocenteController
 
 	//Funcion que permite al admin editar y ver informacion de los docentes
 	function editar_otro(){
-		require_once('Views/Docente/edit.php');
+		$docente = new DocenteModel();
+		$datos = $docente->consultar();
+		require_once('Views/Docente/info.php');
 	}
 	/* function error(){
 		require_once('Views/Docente/error.php');

@@ -24,7 +24,7 @@
                     <input type="text" name="apellido" class="form-control is-invalid" placeholder="Apellido..." required>
             </div>
             <div class="form-group">
-                    <label>Apellido</label>
+                    <label>Cédula</label>
                     <input type="text" name="cedula" class="form-control is-invalid" placeholder="Cedula..." required>
             </div>
             <div class="form-group">
@@ -39,8 +39,8 @@
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
         <?php
-            if(isset($errorRegister)){
-                echo $errorRegister;
+            if(isset($Registerexitoso)){
+                echo $Registerexitoso;
             }
         ?>
 </div>
