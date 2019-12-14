@@ -1,5 +1,5 @@
 
-<div style="margin-left: 20%;margin-right: 20%;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">
+<div style="margin:auto ;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">
     <form action="?controller=User&action=verify" method="POST">
        
         <h2>Iniciar sesión</h2>
