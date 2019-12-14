@@ -7,6 +7,9 @@ class PerfilController
 	{
 		
 	}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
     function Actualizar(){
 		$actualizar = new PerfilModel();
 		if(isset($_POST['primer_nombre']) && isset($_POST['primer_apellido']) && isset($_POST['segundo_nombre']) && isset($_POST['segundo_apellido'])&& isset($_POST['cedula'])&& isset($_POST['fecha_nac'])&& isset($_POST['estado_civil'])&& isset($_POST['tipo_sangre'])&& isset($_POST['telefono_casa']) && isset($_POST['celular']) && isset($_POST['provincia_res']) && isset($_POST['distrito_res'])&& isset($_POST['corregimiento_res'])&& isset($_POST['direccion_especif'])&& isset($_POST['categoria_doc'])&& isset($_POST['ubicacion_sede'])&& isset($_POST['depto'])&& isset($_POST['correo'])&& isset($_POST['genero'])){
@@ -85,8 +88,10 @@ class PerfilController
 		}
 	}
 
-	function Familiar(){ 
-		
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	function Familiar(){ 	
 		$familiar = new PerfilModel();
 		if(isset($_POST['parentezco'])
 		&& isset($_POST['nombre_fam']) 
@@ -145,7 +150,41 @@ class PerfilController
 		}
 	}
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	function Preparacion(){
 		require_once('Views/Perfil/Preparacion.php');
+		$preparacion = new PerfilModel();
+		if(isset($_POST['titulo'])
+		&& isset($_POST['anio']) 
+		&& isset($_POST['universidad']) 
+		&& isset($_POST['nivel'])){
+			$titulo = $_POST['titulo'];
+			$anio = $_POST['anio'];
+			$universidad = $_POST['universidad'];
+			$nivel = $_POST['nivel'];
+
+			echo $titulo,
+			$anio,
+			$universidad,
+			$nivel;
+
+				if($familiar->inset_preparacion($titulo,
+				$anio,
+				$universidad,
+				$nivel)){
+				echo "insertado";
+				require_once('Views/Home/index.php');
+				}
+				else{
+					echo "no insertado";
+					require_once('Views/Perfil/Familiar.php');
+				}
+		}
+		else{
+		echo "no encontro registros";
+		require_once('Views/Perfil/Familiar.php');
+		}
 	}
 }

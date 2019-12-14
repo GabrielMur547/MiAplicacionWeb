@@ -60,7 +60,12 @@ class PerfilModel{
             }
     }
 
-    
+
+
+
+
+
+
     public function insert_familiar($parentezco,
     $nombre_fam,
     $apellido_fam,
@@ -95,6 +100,36 @@ class PerfilModel{
             $telef_ofi_fam,
             $celular_fam,
             $correo_fam,
+            '$id');");
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+
+
+
+
+
+
+    public function insert_preparacion($titulo,
+    $anio,
+    $universidad,
+    $nivel){
+        $consultar = "SELECT * FROM docentes WHERE id_docente = '$id';";
+        $result = $this->db->query($consultar);
+
+        if(mysqli_num_rows($result)>0){
+            $insert = $this->db->query("insert into preparacion_academica_doc(titulo,
+            anio,
+            universidad,
+            nivel) VALUES ($titulo,
+            $anio,
+            $universidad,
+            $nivel,
             '$id');");
             return true;
         }
