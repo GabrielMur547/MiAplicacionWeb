@@ -14,8 +14,8 @@ class DocenteModel{
         }
         return $this->docentes;
     }
-    public function buscar_doc(){
-        $consulta = $this->db->query("select * from docentes WHERE (primer_nombre LIKE '%$busc%' OR primer_apellido LIKE '$busc%' OR cedula LIKE '$busc%');");
+    public function buscar_doc($buscar){
+        $consulta = $this->db->query("select * from docentes WHERE primer_nombre = '$buscar' OR primer_apellido = '$buscar' OR cedula LIKE '$buscar';");
         while($filas = $consulta->fetch_assoc()){
             $this->docentes[] = $filas;
         }

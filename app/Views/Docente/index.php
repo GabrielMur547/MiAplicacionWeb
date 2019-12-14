@@ -6,7 +6,7 @@ echo " login";
 <div style="padding-left:10%; padding-right: 10%;padding-top: 2%; width:100%">
         <form action="?controller=Docente&&action=busqueda" method="POST">
             <div class="input-group shadow p-3 mb-5 bg-white rounded" style="border-radius: 6px;">
-                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input type="text" name="buscar" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit" id="busc" href="?controller=Administrativo&action=busqueda">Buscar</button>
                 </div>

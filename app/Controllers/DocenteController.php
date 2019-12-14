@@ -20,7 +20,24 @@ class DocenteController
 
 	function busqueda(){
 		$docente = new DocenteModel();
-		$datos = $docente->buscar_doc();
+		
+		if(isset($_POST['buscar'])){
+		$buscar = $_POST['buscar'];
+		if($docente->buscar_doc($buscar)){
+			echo "existe";
+			$datos = $docente->buscar_doc();
+			echo $datos;
+			require_once('Views/Docente/index.php');
+		}
+		else{
+			echo "no existe";
+			require_once('Views/Docente/index.php');
+		}
+		}
+		else{
+			echo "no hay nada";
+			require_once('Views/Docente/index.php');
+		}
 		require_once('Views/Docente/index.php');
 	}
 
