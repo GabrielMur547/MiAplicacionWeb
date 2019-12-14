@@ -3,8 +3,8 @@
 ?>
 </header>
 <div style="padding-left: 1%; padding-right: 1%; width: 100%;">
-        <h2>Editar Perfil</h2>
-        <form action="?controller=Perfil&&action=Actualizar" method="POST" class="was-validated">
+    <h2>Editar Perfil</h2>
+    <form action="?controller=Perfil&&action=Actualizar" method="POST" class="was-validated">
             <div class="form-row">
                 <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label >Primer nombre: </label>
@@ -30,7 +30,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label>Fecha de nacimiento:</label>
-                    <input type="text" name="fecha_nac" class="form-control is-invalid" required>
+                    <input type="date" name="fecha_nac" class="form-control is-invalid" required>
                 </div>
                 <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
                     <label>Cédula:</label>
@@ -117,9 +117,9 @@
                     <label>Categoría:</label>
                     <select class="custom-select is-invalid" name="categoria_doc" required>
                         <option selected disabled value="">Seleccione...</option>
-                        <option>Tiempo Completo</option>
-                        <option>Tiempo Parcial</option>
-                        <option>Investigador</option>
+                        <option value="1">Tiempo Completo</option>
+                        <option value="2">Tiempo Parcial</option>
+                        <option value="3">Investigador</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6 mb-3"  style="padding-left: 2%; padding-right: 2%;">
@@ -158,6 +158,6 @@
                 <button type="submit" class="btn btn-success">Guardar</button>
             </div>
         </div>
-        </form>
+    </form>
 
-    </div>
+</div>

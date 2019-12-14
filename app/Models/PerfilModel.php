@@ -31,33 +31,33 @@ class PerfilModel{
     $genero){ 
 
     $consultar = "SELECT * FROM docentes WHERE cedula = '$cedula';";
-     $result = $this->db->query($consultar);
+        $result = $this->db->query($consultar);
 
-        if(mysqli_num_rows($result)>0){
-        $insert_user = $this->db->query("UPDATE docentes SET (primer_nombre='$primer_nombre', 
-            segundo_nombre='$segundo_nombre', 
-            primer_apellido='$primer_apellido', 
-            segundo_apellido='$segundo_apellido', 
-            cedula='$cedula', 
-            fecha_nac='$fecha_nac', 
-            estado_civil='$estado_civil', 
-            tipo_sangre='$tipo_sangre',
-            telefono_csa='$telefono_casa',
-            celular='$celular',
-            provincia_res='$provincia_res',
-            distrito_res='$distrito_res',
-            corregimiento_res='$corregimiento_res',
-            direcion_especif'$direccion_especif', 
-            categoria_doc='$categoria_doc', 
-            ubicacion_cede='$ubicacion_cede', 
-            depto='$depto', 
-            correo='$correo', 
-            genero='$genero') WHERE cedula=$cedula;"); //Colocar usuario actual    
-return true;
-        }
-        else{
-            return false;
-        }
+            if(mysqli_num_rows($result)>0){
+            $insert_user = $this->db->query("UPDATE docentes SET (primer_nombre='$primer_nombre', 
+                segundo_nombre='$segundo_nombre', 
+                primer_apellido='$primer_apellido', 
+                segundo_apellido='$segundo_apellido', 
+                cedula='$cedula', 
+                fecha_nac='$fecha_nac', 
+                estado_civil='$estado_civil', 
+                tipo_sangre='$tipo_sangre',
+                telefono_csa='$telefono_casa',
+                celular='$celular',
+                provincia_res='$provincia_res',
+                distrito_res='$distrito_res',
+                corregimiento_res='$corregimiento_res',
+                direcion_especif'$direccion_especif', 
+                categoria_doc='$categoria_doc', 
+                ubicacion_cede='$ubicacion_cede', 
+                depto='$depto', 
+                correo='$correo', 
+                genero='$genero') WHERE cedula=$cedula;"); //Colocar usuario actual    
+    return true;
+            }
+            else{
+                return false;
+            }
 }
     public function insert_familiar($parentezco,
     $nombre_fam,
