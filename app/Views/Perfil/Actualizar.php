@@ -4,7 +4,7 @@
 </header>
     <div style="padding-left: 1%; padding-right: 1%; width: 100%;">
         <h2>Editar Perfil</h2>
-        <form action="?controller=Docente&&action=update" method="post" class="was-validated">
+        <form action="?controller=Docente&&action=save_update" method="post" class="was-validated">
             <div class="form-row">
                 <div class="form-group col-md-6 mb-3" style="padding-left: 2%; padding-right: 2%;">
                     <label >Primer nombre: </label>
@@ -161,8 +161,4 @@
 
     </div>
 
-<header>
-<?php require_once('Views/Layouts/menuUser.php');
-?>
-</header>
 
