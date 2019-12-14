@@ -1,4 +1,4 @@
-<div style="background-color: green;">
+<div style="background-color: green; width: 100%;">
 <nav class="navbar navbar-expand-lg navbar-light" >
     <button style="border-color:white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         
             <li class="nav-item active">
-                <a style="color:white;font-size:16px;" class="nav-link" href="#">Secretaría Académica<span class="sr-only">(current)</span></a>
+                <a style="color:white;font-size:16px;" class="nav-link" href="?controller=Home&action=index">Secretaría Académica<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
