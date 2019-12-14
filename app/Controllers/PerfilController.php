@@ -10,6 +10,7 @@ class PerfilController
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Hace el update a la tabla de docente durante la actualizacion de perfil
     function Actualizar(){
 		$actualizar = new PerfilModel();
 		if(isset($_POST['primer_nombre']) && isset($_POST['primer_apellido']) && isset($_POST['segundo_nombre']) && isset($_POST['segundo_apellido'])&& isset($_POST['cedula'])&& isset($_POST['fecha_nac'])&& isset($_POST['estado_civil'])&& isset($_POST['tipo_sangre'])&& isset($_POST['telefono_casa']) && isset($_POST['celular']) && isset($_POST['provincia_res']) && isset($_POST['distrito_res'])&& isset($_POST['corregimiento_res'])&& isset($_POST['direccion_especif'])&& isset($_POST['categoria_doc'])&& isset($_POST['ubicacion_sede'])&& isset($_POST['depto'])&& isset($_POST['correo'])&& isset($_POST['genero'])){
@@ -91,6 +92,7 @@ class PerfilController
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Obtiene la informacion del form de insertar familiar
 	function Familiar(){ 	
 		$familiar = new PerfilModel();
 		if(isset($_POST['parentezco'])
@@ -153,6 +155,7 @@ class PerfilController
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Obtiene los datos del form de insertar preparacion
 	function Preparacion(){
 		require_once('Views/Perfil/Preparacion.php');
 		$preparacion = new PerfilModel();

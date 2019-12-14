@@ -9,6 +9,7 @@ class UserModel{
         $this->db = Conexion::conectar();
     }
 
+    //Verifica si el usuario existe
     public function userExists($user, $pass){
         //$md5pass = md5($pass);
         $consultar = "SELECT * FROM registrar WHERE correo = '$user'AND contrasenia = '$pass';";
@@ -21,6 +22,8 @@ class UserModel{
         }
     }
 
+
+    //Verifica la informacion del usuario para hacer el manejo durante la sesión
     public function setUser($user){
         $consultar = "SELECT * FROM registrar WHERE correo = '$user'AND contrasenia = '$pass';";
         $result = $this->db->query($consultar);
@@ -31,6 +34,8 @@ class UserModel{
         }
     }
 
+    
+    //Retorna el nombre
     public function getNombre(){
         return $this->nombre;
     }

@@ -12,6 +12,7 @@ class AdministrativoController
 
 	}
 
+	//Vista principal del modulo administrativo
 	function index(){
 		$administrativo = new AdministrativoModel();
 		$datos = $administrativo->listar();

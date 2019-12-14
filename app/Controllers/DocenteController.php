@@ -12,27 +12,29 @@ class DocenteController
 		
 	}
 
+	//Vista principal del modulo docente
 	function index(){
 		$docente = new DocenteModel();
 		$datos = $docente->listar();
 		require_once('Views/Docente/index.php');
 	}
 
+	//Funcion de busqueda por nombre o apellido o cédula
 	function busqueda(){
 		$docente = new DocenteModel();
 		
 		if(isset($_POST['buscar'])){
-		$buscar = $_POST['buscar'];
-		if($docente->buscar_doc($buscar)){
-			echo "existe";
-			$datos = $docente->buscar_doc();
-			echo $datos;
-			require_once('Views/Docente/index.php');
-		}
-		else{
-			echo "no existe";
-			require_once('Views/Docente/index.php');
-		}
+			$buscar = $_POST['buscar'];
+			if($docente->buscar_doc($buscar)){
+				echo "existe";
+				$datos = $docente->buscar_doc();
+				echo $datos;
+				require_once('Views/Docente/index.php');
+			}
+			else{
+				echo "no existe";
+				require_once('Views/Docente/index.php');
+			}
 		}
 		else{
 			echo "no hay nada";
@@ -41,10 +43,14 @@ class DocenteController
 		require_once('Views/Docente/index.php');
 	}
 
+
+	//Funcion para agregar un docente a la BD
 	function add(){
 		require_once('Views/Docente/add.php');
 	}
 
+
+	//Funcion que trae los datos del form de registro
 	function save(){ 
 		
 		$docente = new DocenteModel();
@@ -66,7 +72,7 @@ class DocenteController
 	}
 
 
-
+	//Funcion que permite al admin editar y ver informacion de los docentes
 	function editar_otro(){
 		require_once('Views/Docente/edit.php');
 	}

@@ -5,6 +5,8 @@ require_once ('Controllers/UserSessionController.php');
 
 class UserController{
 
+
+    //Verifica los datos del usuario durante el inicio de sesión
     public function verify()
     {
         

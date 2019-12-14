@@ -3,10 +3,14 @@ class DocenteModel{
     private $db;
     private $docentes;
  
+    //Constructor
     public function __construct(){
         $this->db = Conexion::conectar();
         $this->docentes = array();
     }
+
+
+    //Hace una consulta a la BD para mostrar todos los docentes
     public function listar(){
         $consulta = $this->db->query("select * from docentes;");
         while($filas = $consulta->fetch_assoc()){
@@ -14,13 +18,19 @@ class DocenteModel{
         }
         return $this->docentes;
     }
+
+
+    //Hace una consulta a la BD para mostrar los o el docentes que se está buscando
     public function buscar_doc($buscar){
-        $consulta = $this->db->query("select * from docentes WHERE primer_nombre = '$buscar' OR primer_apellido = '$buscar' OR cedula LIKE '$buscar';");
+        $consulta = $this->db->query("select * from docentes WHERE primer_nombre LIKE '$buscar' OR primer_apellido LIKE '$buscar' OR cedula LIKE '$buscar';");
         while($filas = $consulta->fetch_assoc()){
             $this->docentes[] = $filas;
         }
         return $this->docentes;
     }
+
+
+    //Inserta los registros de docente a la BD
     public function insert_user($correo, $pass, $nom, $ape, $cedu){
         $consultar = "SELECT * FROM registrar WHERE correo = '$correo';";
         $result = $this->db->query($consultar);

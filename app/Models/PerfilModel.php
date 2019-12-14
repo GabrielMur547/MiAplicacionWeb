@@ -9,6 +9,7 @@ class PerfilModel{
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Rescata el ID del usuario para manejarlo durante la sesión
     public function id(){
         $user = new UserSessionController();
         $id = $this->db->query("select id_docente from docentes where correo = '$user';");
@@ -18,6 +19,7 @@ class PerfilModel{
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Obtiene los datos del form de actualizacion de perfil
     public function update_perfil(  $primer_nombre, 
                                     $primer_apellido,
                                     $segundo_nombre, 
@@ -74,6 +76,7 @@ class PerfilModel{
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Realiza los insert de los familiares
     public function insert_familiar($parentezco,
     $nombre_fam,
     $apellido_fam,
@@ -123,6 +126,7 @@ class PerfilModel{
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Insert de las preparaciones del docente
     public function insert_preparacion($titulo,
     $anio,
     $universidad,

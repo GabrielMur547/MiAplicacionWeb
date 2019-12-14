@@ -7,6 +7,9 @@ class AdministrativoModel{
         $this->db = Conexion::conectar();
         $this->administrativos = array();
     }
+
+
+    //Hace una consulta a la BD y muestra todos los usuarios administrativos
     public function listar(){
         $consulta = $this->db->query("select * from administrativos;");
         while($registros = $consulta->fetch_assoc()){
