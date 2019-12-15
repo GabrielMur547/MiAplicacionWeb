@@ -32,7 +32,7 @@
             </li>
         </ul>
         
-            <a style="color: green; border-color:white;" class="nav-link" href="?controller=UserSession&action=closeSession" type="button" id="closesession" role="button">
+            <a style="color: green; border-color:white;" class="btn btn-light" href="?controller=UserSession&action=closeSession" id="closesession" role="button">
             Cerrar Sesión 
             </a>
 </div>
