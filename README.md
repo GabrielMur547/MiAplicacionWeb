@@ -12,11 +12,10 @@
 
 
 
+Usuario tipo administrativo
+    user:Belenbonilla@utp.ac.pa
+    password:clave123
 
 Usuario tipo docente
-    user:
-    password:
-
-Usuario tipo administrativo
-    user:
-    password:
+	correo:Anthony.Santana@utp.ac.pa
+	password:contra123
