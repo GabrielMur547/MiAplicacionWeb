@@ -11,9 +11,10 @@ else if ($_SESSION['user'] != 'gabrielmurillo547@gmail.com'){
 }
 ?>
 </header>
+
 <div class="alert alert-primary mt-3" role="alert" style="margin-left: 20%; margin-right: 20%; text-align: center;">
-            Bienvenidos al Sistema de Gestión de la Secretaría Administrativa de la FISC
-        </div>
+    Bienvenidos al Sistema de Gestión de la Secretaría Administrativa de la FISC
+</div>
 
         <div style="margin-right: 10%; margin-left: 10%; margin-top: 5%;" id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
