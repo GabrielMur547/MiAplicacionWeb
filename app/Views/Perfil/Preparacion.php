@@ -1,4 +1,4 @@
-<header>
+<header style="width:100%;">
 <?php require_once('Views/Layouts/menuUser.php');
 //echo " Funciona Preparacion";
 ?>

@@ -1,4 +1,4 @@
-<header>
+<header style="width:100%;">
 <?php require_once ('Controllers/UserSessionController.php');
 //$userSession = new UserSessionController();
 if($_SESSION['user'] == 'gabrielmurillo547@gmail.com'){
