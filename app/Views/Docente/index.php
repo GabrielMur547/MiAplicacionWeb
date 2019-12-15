@@ -1,7 +1,9 @@
-<header>
+
+<header style="width:100%;">
 <?php require_once('Views/Layouts/menu.php');
 //echo " login";
 ?>
+</header>
 <h2 class="mt-2">Docentes</h2>
 <div style="padding-left:10%; padding-right: 10%;padding-top: 2%; width:100%">
         <form action="?controller=Docente&&action=busqueda" method="POST">
@@ -13,7 +15,7 @@
             </div>  
         </form>
 </div>
-    
+<form action="?controller=Docente&&action=editar_otro" method="POST">    
 <div class="table-responsive" style="padding-left: 2%; padding-right: 2%;">
     <table class="table">
             <thead class="thead-dark" style="text-align: center;">
@@ -32,7 +34,8 @@
                 <?php
                     foreach ($datos as $dato) { ?>
                     <tr>
-                        <td><a href="?controller=Docente&&action=editar_otro"><?php echo $dato["cedula"] ?></a></td>
+                    
+                        <td><a href="?controller=Docente&&action=editar_otro" name="cedula"><?php echo $dato["cedula"] ?></a></td>
                         <td><?php echo $dato["primer_nombre"] . ' ' . $dato["segundo_nombre"] ?></td>
                         <td><?php echo $dato["primer_apellido"] . ' ' . $dato["segundo_apellido"] ?></td>
                         <td><?php echo $dato["genero"] ?></td>
@@ -45,3 +48,4 @@
                 ?>
             </tbody>
 </div>
+</form>

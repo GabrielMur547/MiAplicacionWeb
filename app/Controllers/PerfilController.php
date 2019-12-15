@@ -173,17 +173,18 @@ class PerfilController
 				$anio,
 				$universidad,
 				$nivel)){
-				echo "    insertado";
+					//echo  " mal";
 				require_once('Views/Home/index.php');
 				}
 				else{
-					echo "    no insertado";
+					//echo  " mal";
+				$Listo = "Error al insertar la preparacion academica";
 					require_once('Views/Perfil/Preparacion.php');
 				}
 		}
 		else{
 		//echo "no encontro registros";
-		require_once('Views/Perfil/Preparacion.php');
+		//require_once('Views/Perfil/Preparacion.php');
 		}
 	}
 }

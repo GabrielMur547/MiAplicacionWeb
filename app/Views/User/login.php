@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 
+<style>
+    body{
+        background:url(views/user/background.jpg)no-repeat fixed center center;
+        background-size:cover;
+    }
+</style>
+
+<body>
 <div style="margin:auto ;margin-top: 5%;" class="shadow p-3 mb-5 bg-white rounded">
     <form action="?controller=User&action=verify" method="POST">
        
@@ -19,3 +35,5 @@
             }
         ?>
 </div>
+</body>
+</html>

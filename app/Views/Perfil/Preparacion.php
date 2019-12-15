@@ -1,4 +1,4 @@
-<header>
+<header style="width:100%;">
 <?php require_once('Views/Layouts/menuUser.php');
 //echo " Funciona Preparacion";
 ?>
@@ -37,5 +37,10 @@
                 <button type="submit" class="btn btn-success">Agregar preparación académica</button>
             </div>
         </div>
+        <?php
+            if(isset($Listo)){
+                echo $Listo;
+            }
+        ?>
     </form>
 </div>

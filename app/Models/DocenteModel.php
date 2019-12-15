@@ -47,7 +47,7 @@ class DocenteModel{
     
     
     //Consulta la informacion de algun registro en especifico
-    public function consultar(){
+    public function consultar($cedula){
         $consulta = $this->db->query("select * from docentes WHERE cedula = '$cedula';");
         $this->docentes[] = $filas;
         return $this->docentes;

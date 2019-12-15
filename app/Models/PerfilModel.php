@@ -11,8 +11,7 @@ class PerfilModel{
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Rescata el ID del usuario para manejarlo durante la sesión
     public function id(){
-        $user = new UserSessionController();
-        $id = $this->db->query("select id_docente from docentes where correo = '$user';");
+        
     }
 
 
@@ -86,7 +85,7 @@ class PerfilModel{
     $telef_ofi_fam,
     $celular_fam,
     $correo_fam){
-        $consultar = "SELECT * FROM docentes WHERE id_docente = '12';";
+        $consultar = "SELECT * FROM docentes WHERE id_docente = '$id';";
         $result = $this->db->query($consultar);
 
         if(mysqli_num_rows($result)>0){
@@ -100,7 +99,7 @@ class PerfilModel{
             '$telef_ofi_fam', 
             '$celular_fam',
             '$correo_fam', 
-            '12');");
+            '$id');");
             return true;
         }
         else{
@@ -113,19 +112,24 @@ class PerfilModel{
 
 
 
-
+    
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
     //Insert de las preparaciones del docente
     public function insert_preparacion($titulo,
     $anio,
     $universidad,
     $nivel){
-        $consultar = "SELECT * FROM docentes WHERE id_docente = '12';";
+        require_once ('Controllers/UserSessionController.php');
+        $user = $_SESSION['user'];
+        $resultado = $this->db->query("select * from docentes where correo = '$user';");
+        $id = $resultado->fetch_assoc();
+
+        $consultar = "SELECT * FROM docentes WHERE id_docente = '6';";
         $result = $this->db->query($consultar);
 
-        if(mysqli_num_rows($result)>0){
+        if(mysqli_num_rows($result)==0){
             $insert = $this->db->query("insert into preparacion_academica_doc(titulo, anio, universidad, nivel, docentes_id_docente) 
-            values('$titulo', '$anio', '$universidad', '$nivel', '12');");
+            values('$titulo', '$anio', '$universidad', '$nivel', '6');");
             return true;
         }
         else{

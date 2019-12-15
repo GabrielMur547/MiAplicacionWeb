@@ -1,4 +1,4 @@
-<header>
+<header style="width:100%;">
 <?php require_once('Views/Layouts/menu.php');
 ?>
 
@@ -129,28 +129,11 @@
                 </div>
             </div>
 
-            <?php require_once ('Controllers/UserSessionController.php');
-            //$userSession = new UserSessionController();
-            if($_SESSION['user'] == 'gabrielmurillo547@gmail.com'){ ?>
-                <div class="row" style="margin-bottom: 2%; margin-top: 3%;">
-                    <div class="col-md-11">
-                    </div>
-                    <div class="col-md-1">
-                    <a class="btn btn-success" href="http://www.utp.ac.pa" role="button" target="_blank">Editar</a>
-                    </div>
-                </div>
-                <?php
-            }
-            else if ($_SESSION['user'] != 'gabrielmurillo547@gmail.com'){
-                
-            }
-            ?>
-
         <div class="row" style="margin-bottom: 2%; margin-top: 3%;">
             <div class="col-md-11">
             </div>
             <div class="col-md-1">
-            <a class="btn btn-success" href="?controller=Perfil&action=Actualizar" role="button" target="_blank">Editar</a>
+            <a class="btn btn-success" href="?controller=Docente&action=edit" role="button" target="_blank">Editar</a>
             </div>
         </div>
 </div>

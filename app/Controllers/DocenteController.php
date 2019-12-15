@@ -75,13 +75,24 @@ class DocenteController
 
 	//Funcion que permite al admin editar y ver informacion de los docentes
 	function editar_otro(){
+		
 		$docente = new DocenteModel();
-		$datos = $docente->consultar();
+		if(isset($_POST['cedula'])){
+			$cedula = $_POST['cedula'];
+		echo $cedula;
+		if($docente->consultar($cedula));
+		$datos = $docente->listar();
 		require_once('Views/Docente/info.php');
+		}
+		else{
+			require_once('Views/Docente/info.php');
+		}
 	}
 	/* function error(){
 		require_once('Views/Docente/error.php');
 	} */
-
+	function edit(){
+		require_once('Views/Docente/edit.php');
+	}
 }
 ?>
